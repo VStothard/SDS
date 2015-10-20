@@ -1,0 +1,432 @@
+@import "bourbon/_bourbon.scss";
+
+/********* VARIABLES *********/
+
+/*General*/
+
+$media-tab: 980px;
+$media-mob: 840px; /*controls the max-width allocated to media queries*/
+$header-height: 90px; /*adjusts the height of the header and the padding-top inside the header-bar so it clears the fixed nav bar*/
+
+/*Color Palette*/
+
+$link-color: white;
+$header-color: white;
+$paragraph-color: white;
+$primary1: rgba(0,0,0,1);
+$primary2: rgba(8,124,167,1); /*medium blue*/
+$primary3: rgba(244,244,249, 1); /*light grey*/
+$primary4: rgba(88,111,124,1);
+
+
+
+/********* MIXINS ************/
+
+@mixin mwidths {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+@mixin contactButton {
+	img {
+		width: 150px;
+		padding: 30px 0px;
+	}
+}
+
+@mixin contactButtonLRG {
+	img {
+		width: 250px;
+		padding: 30px 0px;
+	}
+}
+
+
+/********* GENERAL STYLING *********/
+
+
+* {
+	/*border: red solid 1px;*/
+	box-sizing: border-box;
+} 
+
+body {
+	padding: 0;
+	margin: 0;
+	background: grey;
+	background-image: url("img/light.jpeg"); 
+		/* background example #2 url("img/VR1.jpg");*/ 
+	background-size: cover;
+	background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+/********* MOBILE MENU *********/
+
+
+
+
+/********* HEADER *********/
+
+.desk-nav-bar {
+	background: $primary1;
+	border-bottom: solid 3px $primary2;
+	color: $header-color;
+	width: 100%;
+	height: $header-height;
+	clear: both;
+	position: fixed; /*ADD THIS WHEN YOU DO THE MIXIN*/
+	-webkit-box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
+
+	nav {
+		padding: 0;
+
+		.logo {
+			height: $header-height;
+			float: left;
+			@media screen and (max-width: $media-mob) {
+				width: 80%;
+			}
+
+			.logo-text {
+				display: inline-block;
+				
+				p {
+					padding: 30px 0px 30px 30px;
+					margin: 0;
+					font-size: 30px;
+
+					@media screen and (max-width: $media-tab) {
+						font-size: 20px;
+						padding: 37px 0px 37px 20px;
+						-webkit-transition: font-size 0.3s, padding 0.3s ease;
+						-moz-transition: font-size 0.3s, padding 0.3s ease;
+						-ms-transition: font-size 0.3s, padding 0.3s ease;
+						-o-transition: font-size 0.3s, padding 0.3s ease;
+						transition: font-size 0.3s, padding 0.3s ease;
+					}
+				}
+			}
+
+			
+		}
+
+		.menu-open {
+			width: 20%;
+			max-width: 85px;
+			height: $header-height;
+			float: right;
+
+			@media screen and (min-width: $media-mob) {
+				display: none;
+			}
+
+			img {
+				margin: 32px 10px;
+				width: 100%;
+				max-width: 35px;
+			}
+		}
+
+		.mob-drop-menu {
+			clear: both;
+			background: $primary4;
+			padding: 20px;
+			-webkit-box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
+			box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
+
+
+			.mob-nav-links {
+				a {
+					display: block;
+					text-decoration: none;
+					text-align: left;
+					color: white;
+					padding: 20px;
+					margin: 0 auto;
+				}
+
+				a:nth-child(n+2) {
+					border-top: 1px solid $primary3;
+				}
+			}
+
+			@media screen and (min-width: $media-mob) {
+				display: none;
+			}
+
+		}
+
+
+		.nav-links {
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-right: 30px;
+			float: right; 
+
+			.flexbox & {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: no-wrap;
+					@media screen and (max-width: $media-mob) {
+					display: none; /* JQUERY WILL NEED TO CHANGE DISPLAY ON BOTH FLEXBOX AND ALTERNATIVE*/
+					}
+				}
+					
+
+			a {
+				margin-left: 10px;
+				padding: 10px 5px;
+				color: $link-color;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			@media screen and (max-width: $media-mob) {
+				display: none;
+			}
+		}
+	}
+}
+
+.header-bar {
+	padding-top: $header-height;
+	clear: both;
+	@include mwidths;
+	min-height: 800px;
+
+	.header-box {
+		color: $header-color;
+		background-color: rgba(0, 0, 0, 0.4);
+		width: 60%;
+		min-height: 800px;
+		padding: 80px 50px 80px 50px;
+
+		@include contactButton;
+
+		@media screen and (max-width: $media-mob) {
+			@include mwidths;
+			width: 90%;
+			margin: 0 auto;
+			padding: 40px 20px 40px 20px;
+			}
+	}
+}
+
+
+/********* SKILLS BOX *********/
+
+.skills-box {
+	background: $primary2;
+	width: 100%;
+	.skills-wrapper {
+		width: 90%;
+		@include mwidths;
+		padding: 0px 40px;
+		@media screen and (max-width: $media-mob) {
+			padding: 0px;
+			width: 60%;
+			max-width: 270px;
+			}
+
+
+		/*if browser doesn't support flexbox*/
+		
+
+		.skill {
+			width: 31%;
+			max-width: 270px;
+			display: inline-block;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			color: $paragraph-color;
+
+				&:nth-child(1) {
+					margin-left: 3%;
+				} 
+				.skill-image {
+					margin: 0 auto;
+					padding: 0px 30%;
+					img {
+						width: 100%;
+						max-width: 150px;
+					}
+				}
+
+				h2,
+				p {
+					text-align: center;
+				}
+
+			@media screen and (max-width: $media-mob) {
+				
+				width: 100%;
+				display: block;
+				margin-left: 0 auto;
+
+				.skill-image {
+					margin: 0 auto;
+				}
+
+				h2,
+				p {
+					max-width: 270px;
+					margin: 0 auto;
+				}
+				
+				}
+		}
+
+	.flexbox & {
+		display: flex;
+		justify-content: space-between;
+			.skill {
+			margin-left: 0;
+			}
+		@media screen and (max-width: $media-mob) {
+			display: block;
+			margin: 0 auto;
+			}
+		} 
+
+	}
+}
+
+/********* INFO BAR *********/
+
+.info-bar {
+	background: $primary3;
+
+	.info-wrap {
+		@include mwidths;
+		
+
+		.info-box {
+			padding: 40px;
+			padding-top: 80px;
+			width: 100%;
+			display: inline-block;
+			background: $primary3;
+
+			@include contactButton;
+
+			.demo-img {
+				width: 100%;
+				height: 350px;
+				background: url("img/VR1.jpg");
+				background-size: cover;
+				background-position: bottom center;
+			}		
+
+			h1 {
+				padding:30px 30px 10px 30px;
+			}
+
+			p {
+				padding: 10px 30px 5px 30px;
+			}
+
+			.button {
+				margin: 0px 30px;
+			}
+		}
+
+		.img-bar {
+			.img-wrapper {
+				@include mwidths;
+
+					.img-bar-box {
+						width: 33.333%;
+						display: inline-block;
+						float: left;
+
+						img {
+							width: 100%;
+						}
+					}
+			}
+		}
+	}
+}
+
+/********* IMG BAR *********/
+
+/*
+.img-bar {
+	width: 100%;
+	background: $primary2;
+
+	.img-wrapper {
+		@include mwidths;
+		@media screen and (max-width: $media-mob) {
+			display: none;
+			}
+
+		.img-bar-box {
+			width: 33.333%;
+			display: inline-block;
+			float: left;
+			@media screen and (max-width: $media-mob) {
+				width: 100%;
+				float: none;
+				display: block;
+				}
+
+			img {
+				width:100%;
+			}
+		}
+
+	}
+	
+} */
+
+/********* CONTACT BAR *********/
+
+.contact-bar {
+	@include mwidths;
+	clear: both;
+	height: 250px;
+	padding-top: 70px;
+	background-color: rgba(0, 0, 0, 0.4);
+	.contact-button {
+		color:white;
+		text-align:center;
+		margin: 0 auto;
+
+		.button {
+			@include contactButtonLRG;
+			margin-bottom: 20px;
+
+			
+		}
+	}
+}
+
+/********* FOOTER *********/
+
+footer {
+	clear:both;
+	height: 100px;
+	background: $primary1;
+	color: white;
+	padding: 40px;
+	display: flex;
+	justify-content: space-between;
+
+	.signature  {
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+
+
+}
+

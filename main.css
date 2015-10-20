@@ -1,0 +1,292 @@
+/********* VARIABLES *********/
+/*General*/
+/*controls the max-width allocated to media queries*/
+/*adjusts the height of the header and the padding-top inside the header-bar so it clears the fixed nav bar*/
+/*Color Palette*/
+/*medium blue*/
+/*light grey*/
+/********* MIXINS ************/
+/********* GENERAL STYLING *********/
+* {
+  /*border: red solid 1px;*/
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background: grey;
+  background-image: url("img/light.jpeg");
+  /* background example #2 url("img/VR1.jpg");*/
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Raleway', sans-serif; }
+
+/********* MOBILE MENU *********/
+/********* HEADER *********/
+.desk-nav-bar {
+  background: black;
+  border-bottom: solid 3px #087ca7;
+  color: white;
+  width: 100%;
+  height: 90px;
+  clear: both;
+  position: fixed;
+  /*ADD THIS WHEN YOU DO THE MIXIN*/
+  -webkit-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75); }
+  .desk-nav-bar nav {
+    padding: 0; }
+    .desk-nav-bar nav .logo {
+      height: 90px;
+      float: left; }
+      @media screen and (max-width: 840px) {
+        .desk-nav-bar nav .logo {
+          width: 80%; } }
+      .desk-nav-bar nav .logo .logo-text {
+        display: inline-block; }
+        .desk-nav-bar nav .logo .logo-text p {
+          padding: 30px 0px 30px 30px;
+          margin: 0;
+          font-size: 30px; }
+          @media screen and (max-width: 980px) {
+            .desk-nav-bar nav .logo .logo-text p {
+              font-size: 20px;
+              padding: 37px 0px 37px 20px;
+              -webkit-transition: font-size 0.3s, padding 0.3s ease;
+              -moz-transition: font-size 0.3s, padding 0.3s ease;
+              -ms-transition: font-size 0.3s, padding 0.3s ease;
+              -o-transition: font-size 0.3s, padding 0.3s ease;
+              transition: font-size 0.3s, padding 0.3s ease; } }
+    .desk-nav-bar nav .menu-open {
+      width: 20%;
+      max-width: 85px;
+      height: 90px;
+      float: right; }
+      @media screen and (min-width: 840px) {
+        .desk-nav-bar nav .menu-open {
+          display: none; } }
+      .desk-nav-bar nav .menu-open img {
+        margin: 32px 10px;
+        width: 100%;
+        max-width: 35px; }
+    .desk-nav-bar nav .mob-drop-menu {
+      clear: both;
+      background: #586f7c;
+      padding: 20px;
+      -webkit-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75); }
+      .desk-nav-bar nav .mob-drop-menu .mob-nav-links a {
+        display: block;
+        text-decoration: none;
+        text-align: left;
+        color: white;
+        padding: 20px;
+        margin: 0 auto; }
+      .desk-nav-bar nav .mob-drop-menu .mob-nav-links a:nth-child(n+2) {
+        border-top: 1px solid #f4f4f9; }
+      @media screen and (min-width: 840px) {
+        .desk-nav-bar nav .mob-drop-menu {
+          display: none; } }
+    .desk-nav-bar nav .nav-links {
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-right: 30px;
+      float: right; }
+      .flexbox .desk-nav-bar nav .nav-links {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: no-wrap; }
+        @media screen and (max-width: 840px) {
+          .flexbox .desk-nav-bar nav .nav-links {
+            display: none;
+            /* JQUERY WILL NEED TO CHANGE DISPLAY ON BOTH FLEXBOX AND ALTERNATIVE*/ } }
+      .desk-nav-bar nav .nav-links a {
+        margin-left: 10px;
+        padding: 10px 5px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase; }
+      @media screen and (max-width: 840px) {
+        .desk-nav-bar nav .nav-links {
+          display: none; } }
+
+.header-bar {
+  padding-top: 90px;
+  clear: both;
+  max-width: 1024px;
+  margin: 0 auto;
+  min-height: 800px; }
+  .header-bar .header-box {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 60%;
+    min-height: 800px;
+    padding: 80px 50px 80px 50px; }
+    .header-bar .header-box img {
+      width: 150px;
+      padding: 30px 0px; }
+    @media screen and (max-width: 840px) {
+      .header-bar .header-box {
+        max-width: 1024px;
+        margin: 0 auto;
+        width: 90%;
+        margin: 0 auto;
+        padding: 40px 20px 40px 20px; } }
+
+/********* SKILLS BOX *********/
+.skills-box {
+  background: #087ca7;
+  width: 100%; }
+  .skills-box .skills-wrapper {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0px 40px;
+    /*if browser doesn't support flexbox*/ }
+    @media screen and (max-width: 840px) {
+      .skills-box .skills-wrapper {
+        padding: 0px;
+        width: 60%;
+        max-width: 270px; } }
+    .skills-box .skills-wrapper .skill {
+      width: 31%;
+      max-width: 270px;
+      display: inline-block;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      color: white; }
+      .skills-box .skills-wrapper .skill:nth-child(1) {
+        margin-left: 3%; }
+      .skills-box .skills-wrapper .skill .skill-image {
+        margin: 0 auto;
+        padding: 0px 30%; }
+        .skills-box .skills-wrapper .skill .skill-image img {
+          width: 100%;
+          max-width: 150px; }
+      .skills-box .skills-wrapper .skill h2,
+      .skills-box .skills-wrapper .skill p {
+        text-align: center; }
+      @media screen and (max-width: 840px) {
+        .skills-box .skills-wrapper .skill {
+          width: 100%;
+          display: block;
+          margin-left: 0 auto; }
+          .skills-box .skills-wrapper .skill .skill-image {
+            margin: 0 auto; }
+          .skills-box .skills-wrapper .skill h2,
+          .skills-box .skills-wrapper .skill p {
+            max-width: 270px;
+            margin: 0 auto; } }
+    .flexbox .skills-box .skills-wrapper {
+      display: flex;
+      justify-content: space-between; }
+      .flexbox .skills-box .skills-wrapper .skill {
+        margin-left: 0; }
+      @media screen and (max-width: 840px) {
+        .flexbox .skills-box .skills-wrapper {
+          display: block;
+          margin: 0 auto; } }
+
+/********* INFO BAR *********/
+.info-bar {
+  background: #f4f4f9; }
+  .info-bar .info-wrap {
+    max-width: 1024px;
+    margin: 0 auto; }
+    .info-bar .info-wrap .info-box {
+      padding: 40px;
+      padding-top: 80px;
+      width: 100%;
+      display: inline-block;
+      background: #f4f4f9; }
+      .info-bar .info-wrap .info-box img {
+        width: 150px;
+        padding: 30px 0px; }
+      .info-bar .info-wrap .info-box .demo-img {
+        width: 100%;
+        height: 350px;
+        background: url("img/VR1.jpg");
+        background-size: cover;
+        background-position: bottom center; }
+      .info-bar .info-wrap .info-box h1 {
+        padding: 30px 30px 10px 30px; }
+      .info-bar .info-wrap .info-box p {
+        padding: 10px 30px 5px 30px; }
+      .info-bar .info-wrap .info-box .button {
+        margin: 0px 30px; }
+    .info-bar .info-wrap .img-bar .img-wrapper {
+      max-width: 1024px;
+      margin: 0 auto; }
+      .info-bar .info-wrap .img-bar .img-wrapper .img-bar-box {
+        width: 33.333%;
+        display: inline-block;
+        float: left; }
+        .info-bar .info-wrap .img-bar .img-wrapper .img-bar-box img {
+          width: 100%; }
+
+/********* IMG BAR *********/
+/*
+.img-bar {
+	width: 100%;
+	background: $primary2;
+
+	.img-wrapper {
+		@include mwidths;
+		@media screen and (max-width: $media-mob) {
+			display: none;
+			}
+
+		.img-bar-box {
+			width: 33.333%;
+			display: inline-block;
+			float: left;
+			@media screen and (max-width: $media-mob) {
+				width: 100%;
+				float: none;
+				display: block;
+				}
+
+			img {
+				width:100%;
+			}
+		}
+
+	}
+	
+} */
+/********* CONTACT BAR *********/
+.contact-bar {
+  max-width: 1024px;
+  margin: 0 auto;
+  clear: both;
+  height: 250px;
+  padding-top: 70px;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .contact-bar .contact-button {
+    color: white;
+    text-align: center;
+    margin: 0 auto; }
+    .contact-bar .contact-button .button {
+      margin-bottom: 20px; }
+      .contact-bar .contact-button .button img {
+        width: 250px;
+        padding: 30px 0px; }
+
+/********* FOOTER *********/
+footer {
+  clear: both;
+  height: 100px;
+  background: black;
+  color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between; }
+  footer .signature a {
+    text-decoration: none;
+    color: white; }
+
+/*# sourceMappingURL=main.css.map */
