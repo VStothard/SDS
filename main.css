@@ -124,6 +124,7 @@ body {
 .header-bar {
   padding-top: 90px;
   clear: both;
+  /*stops elements from stretching too wide on large screens*/
   max-width: 1024px;
   margin: 0 auto;
   min-height: 800px; }
@@ -132,12 +133,14 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
     width: 60%;
     min-height: 800px;
-    padding: 80px 50px 80px 50px; }
+    padding: 80px 50px 80px 50px;
+    /*standard contact button*/ }
     .header-bar .header-box img {
       width: 150px;
       padding: 30px 0px; }
     @media screen and (max-width: 840px) {
       .header-bar .header-box {
+        /*stops elements from stretching too wide on large screens*/
         max-width: 1024px;
         margin: 0 auto;
         width: 90%;
@@ -151,6 +154,7 @@ body {
   width: 100%; }
   .skills-box .skills-wrapper {
     width: 90%;
+    /*stops elements from stretching too wide on large screens*/
     max-width: 1024px;
     margin: 0 auto;
     padding: 0px 40px;
@@ -203,6 +207,7 @@ body {
 .info-bar {
   background: #f4f4f9; }
   .info-bar .info-wrap {
+    /*stops elements from stretching too wide on large screens*/
     max-width: 1024px;
     margin: 0 auto; }
     .info-bar .info-wrap .info-box {
@@ -210,7 +215,8 @@ body {
       padding-top: 80px;
       width: 100%;
       display: inline-block;
-      background: #f4f4f9; }
+      background: #f4f4f9;
+      /*standard contact button*/ }
       .info-bar .info-wrap .info-box img {
         width: 150px;
         padding: 30px 0px; }
@@ -227,6 +233,7 @@ body {
       .info-bar .info-wrap .info-box .button {
         margin: 0px 30px; }
     .info-bar .info-wrap .img-bar .img-wrapper {
+      /*stops elements from stretching too wide on large screens*/
       max-width: 1024px;
       margin: 0 auto; }
       .info-bar .info-wrap .img-bar .img-wrapper .img-bar-box {
@@ -268,6 +275,7 @@ body {
 } */
 /**************CONTACT BAR*/
 .contact-bar {
+  /*stops elements from stretching too wide on large screens*/
   max-width: 1024px;
   margin: 0 auto;
   clear: both;
@@ -279,6 +287,7 @@ body {
     text-align: center;
     margin: 0 auto; }
     .contact-bar .contact-button .button {
+      /*large contact button*/
       margin-bottom: 20px; }
       .contact-bar .contact-button .button img {
         width: 250px;
@@ -287,22 +296,80 @@ body {
 /********* ABOUT PAGE *********/
 /**********************HEADER**/
 .about-header {
+  /*Creates a full width header bar, background not set */
   height: 400px;
+  margin: 0;
+  width: 100%;
   background: #087ca7 url("img/VR1.jpg");
   background-size: cover;
-  background-position: center;
-  margin: 0;
-  width: 100%; }
+  background-position: center; }
 
+/*********************CONTENT**/
 .about-wrapper {
   margin: 0;
   width: 100%;
   padding: 40px;
   background: #f4f4f9; }
   .about-wrapper .about-box {
+    /*stops elements from stretching too wide on large screens*/
     max-width: 1024px;
     margin: 0 auto;
     padding: 40px; }
+
+/********* SIMULATIONS PAGE *********/
+/**********************HEADER**/
+.sim-header {
+  /*Creates a full width header bar, background not set */
+  height: 400px;
+  margin: 0;
+  width: 100%;
+  background: #087ca7 url("img/VR1.jpg");
+  background-size: cover;
+  background-position: center; }
+
+/*********************CONTENT**/
+.row-1 {
+  /*creates a full width text row*/ }
+  .row-1 .text-wrapper {
+    margin: 0;
+    width: 100%;
+    padding: 40px;
+    background: #f4f4f9; }
+    .row-1 .text-wrapper .text-box {
+      /*stops elements from stretching too wide on large screens*/
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 40px; }
+
+.row-2 {
+  width: 100%;
+  background: #087ca7; }
+  .row-2 .row-2-wrapper {
+    /*stops elements from stretching too wide on large screens*/
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+    .row-2 .row-2-wrapper .img-box {
+      width: 30%;
+      border: 1px solid red; }
+    .row-2 .row-2-wrapper .text-box {
+      width: 70%;
+      padding: 40px;
+      color: white; }
+
+.row-3 {
+  /*creates a full width text row*/ }
+  .row-3 .text-wrapper {
+    margin: 0;
+    width: 100%;
+    padding: 40px;
+    background: #f4f4f9; }
+    .row-3 .text-wrapper .text-box {
+      /*stops elements from stretching too wide on large screens*/
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 40px; }
 
 /********* FOOTER *********/
 footer {

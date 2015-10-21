@@ -17,24 +17,8 @@ $(document).ready(function(){
 		dropMenu.slideToggle('slow', 'linear');
 	});
 
-/*
-	function open () {
-		dropMenu.show();
-	}
+/***************HEADER SCROLL ANIMATION ***********/
 
-	function close () {
-		dropMenu.hide();
-	}
 
-//PROGRAMMING
-
-	menuOpen.click(function() {
-		if($('element:hidden')) {
-			open();
-		} else if($('element:visible')){
-			close();
-		}
-		
-	}); */
 
 });
