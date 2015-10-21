@@ -23,7 +23,6 @@ body {
   background-position: center;
   font-family: 'Raleway', sans-serif; }
 
-/********* MOBILE MENU *********/
 /********* HEADER *********/
 .desk-nav-bar {
   background: black;
@@ -45,21 +44,24 @@ body {
       @media screen and (max-width: 840px) {
         .desk-nav-bar nav .logo {
           width: 80%; } }
-      .desk-nav-bar nav .logo .logo-text {
-        display: inline-block; }
-        .desk-nav-bar nav .logo .logo-text p {
-          padding: 30px 0px 30px 30px;
-          margin: 0;
-          font-size: 30px; }
-          @media screen and (max-width: 980px) {
-            .desk-nav-bar nav .logo .logo-text p {
-              font-size: 20px;
-              padding: 37px 0px 37px 20px;
-              -webkit-transition: font-size 0.3s, padding 0.3s ease;
-              -moz-transition: font-size 0.3s, padding 0.3s ease;
-              -ms-transition: font-size 0.3s, padding 0.3s ease;
-              -o-transition: font-size 0.3s, padding 0.3s ease;
-              transition: font-size 0.3s, padding 0.3s ease; } }
+      .desk-nav-bar nav .logo a {
+        text-decoration: none;
+        color: white; }
+        .desk-nav-bar nav .logo a .logo-text {
+          display: inline-block; }
+          .desk-nav-bar nav .logo a .logo-text p {
+            padding: 30px 0px 30px 30px;
+            margin: 0;
+            font-size: 30px; }
+            @media screen and (max-width: 980px) {
+              .desk-nav-bar nav .logo a .logo-text p {
+                font-size: 20px;
+                padding: 37px 0px 37px 20px;
+                -webkit-transition: font-size 0.3s, padding 0.3s ease;
+                -moz-transition: font-size 0.3s, padding 0.3s ease;
+                -ms-transition: font-size 0.3s, padding 0.3s ease;
+                -o-transition: font-size 0.3s, padding 0.3s ease;
+                transition: font-size 0.3s, padding 0.3s ease; } }
     .desk-nav-bar nav .menu-open {
       width: 20%;
       max-width: 85px;
@@ -110,6 +112,11 @@ body {
         color: white;
         text-decoration: none;
         text-transform: uppercase; }
+        .desk-nav-bar nav .nav-links a:hover {
+          color: #087ca7; }
+        .desk-nav-bar nav .nav-links a .selected {
+          border: 1px solid yellow;
+          color: #087ca7; }
       @media screen and (max-width: 840px) {
         .desk-nav-bar nav .nav-links {
           display: none; } }
@@ -137,7 +144,8 @@ body {
         margin: 0 auto;
         padding: 40px 20px 40px 20px; } }
 
-/********* SKILLS BOX *********/
+/*********HOME PAGE************/
+/**************SKILLS BOX*/
 .skills-box {
   background: #087ca7;
   width: 100%; }
@@ -191,7 +199,7 @@ body {
           display: block;
           margin: 0 auto; } }
 
-/********* INFO BAR *********/
+/**************INFO BAR*/
 .info-bar {
   background: #f4f4f9; }
   .info-bar .info-wrap {
@@ -228,7 +236,7 @@ body {
         .info-bar .info-wrap .img-bar .img-wrapper .img-bar-box img {
           width: 100%; }
 
-/********* IMG BAR *********/
+/**************IMG BAR*/
 /*
 .img-bar {
 	width: 100%;
@@ -258,7 +266,7 @@ body {
 	}
 	
 } */
-/********* CONTACT BAR *********/
+/**************CONTACT BAR*/
 .contact-bar {
   max-width: 1024px;
   margin: 0 auto;
@@ -275,6 +283,26 @@ body {
       .contact-bar .contact-button .button img {
         width: 250px;
         padding: 30px 0px; }
+
+/********* ABOUT PAGE *********/
+/**********************HEADER**/
+.about-header {
+  height: 400px;
+  background: #087ca7 url("img/VR1.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  width: 100%; }
+
+.about-wrapper {
+  margin: 0;
+  width: 100%;
+  padding: 40px;
+  background: #f4f4f9; }
+  .about-wrapper .about-box {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 40px; }
 
 /********* FOOTER *********/
 footer {

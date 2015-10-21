@@ -63,13 +63,6 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-
-
-/********* MOBILE MENU *********/
-
-
-
-
 /********* HEADER *********/
 
 .desk-nav-bar {
@@ -93,23 +86,26 @@ body {
 			@media screen and (max-width: $media-mob) {
 				width: 80%;
 			}
+			a {
+				text-decoration: none;
+				color: $header-color;
+				.logo-text {
+					display: inline-block;
+					
+					p {
+						padding: 30px 0px 30px 30px;
+						margin: 0;
+						font-size: 30px;
 
-			.logo-text {
-				display: inline-block;
-				
-				p {
-					padding: 30px 0px 30px 30px;
-					margin: 0;
-					font-size: 30px;
-
-					@media screen and (max-width: $media-tab) {
-						font-size: 20px;
-						padding: 37px 0px 37px 20px;
-						-webkit-transition: font-size 0.3s, padding 0.3s ease;
-						-moz-transition: font-size 0.3s, padding 0.3s ease;
-						-ms-transition: font-size 0.3s, padding 0.3s ease;
-						-o-transition: font-size 0.3s, padding 0.3s ease;
-						transition: font-size 0.3s, padding 0.3s ease;
+						@media screen and (max-width: $media-tab) {
+							font-size: 20px;
+							padding: 37px 0px 37px 20px;
+							-webkit-transition: font-size 0.3s, padding 0.3s ease;
+							-moz-transition: font-size 0.3s, padding 0.3s ease;
+							-ms-transition: font-size 0.3s, padding 0.3s ease;
+							-o-transition: font-size 0.3s, padding 0.3s ease;
+							transition: font-size 0.3s, padding 0.3s ease;
+						}
 					}
 				}
 			}
@@ -187,7 +183,17 @@ body {
 				color: $link-color;
 				text-decoration: none;
 				text-transform: uppercase;
+
+				&:hover {
+					color: $primary2;
+				}
+
+				.selected {
+				border: 1px solid yellow;
+					color: $primary2;
+				}
 			}
+
 			@media screen and (max-width: $media-mob) {
 				display: none;
 			}
@@ -219,8 +225,8 @@ body {
 	}
 }
 
-
-/********* SKILLS BOX *********/
+/*********HOME PAGE************/
+/**************SKILLS BOX*/
 
 .skills-box {
 	background: $primary2;
@@ -298,7 +304,7 @@ body {
 	}
 }
 
-/********* INFO BAR *********/
+/**************INFO BAR*/
 
 .info-bar {
 	background: $primary3;
@@ -355,7 +361,7 @@ body {
 	}
 }
 
-/********* IMG BAR *********/
+/**************IMG BAR*/
 
 /*
 .img-bar {
@@ -387,7 +393,7 @@ body {
 	
 } */
 
-/********* CONTACT BAR *********/
+/**************CONTACT BAR*/
 
 .contact-bar {
 	@include mwidths;
@@ -408,6 +414,36 @@ body {
 		}
 	}
 }
+
+
+/********* ABOUT PAGE *********/
+
+/**********************HEADER**/
+
+.about-header {
+	height: 400px;
+	background: $primary2 url("img/VR1.jpg");
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	width: 100%;
+}
+
+.about-wrapper {
+	margin: 0;
+	width: 100%;
+	padding: 40px;
+	background: $primary3;
+
+	.about-box {
+		@include mwidths;
+		padding: 40px;
+	}
+}
+
+
+
+
 
 /********* FOOTER *********/
 
