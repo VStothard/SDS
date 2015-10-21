@@ -22,25 +22,44 @@ $primary4: rgba(88,111,124,1);
 
 /********* MIXINS ************/
 
-@mixin mwidths {
+@mixin mwidths { /*stops elements from stretching too wide on large screens*/
 	max-width: 1024px;
 	margin: 0 auto;
 }
 
-@mixin contactButton {
+@mixin contactButton { /*standard contact button*/
 	img {
 		width: 150px;
 		padding: 30px 0px;
 	}
 }
 
-@mixin contactButtonLRG {
+@mixin contactButtonLRG { /*large contact button*/
 	img {
 		width: 250px;
 		padding: 30px 0px;
 	}
 }
 
+@mixin fullWidthTextBar { /*creates a full width text row*/
+	.text-wrapper {
+		margin: 0;
+		width: 100%;
+		padding: 40px;
+		background: $primary3;
+
+		.text-box {
+			@include mwidths;
+			padding: 40px;
+		}
+	}
+}
+
+@mixin fullWidthHeader { /*Creates a full width header bar, background not set */
+	height: 400px;
+	margin: 0;
+	width: 100%;
+}
 
 /********* GENERAL STYLING *********/
 
@@ -421,13 +440,13 @@ body {
 /**********************HEADER**/
 
 .about-header {
-	height: 400px;
+	@include fullWidthHeader;
 	background: $primary2 url("img/VR1.jpg");
 	background-size: cover;
 	background-position: center;
-	margin: 0;
-	width: 100%;
 }
+
+/*********************CONTENT**/
 
 .about-wrapper {
 	margin: 0;
@@ -443,7 +462,49 @@ body {
 
 
 
+/********* SIMULATIONS PAGE *********/
 
+/**********************HEADER**/
+
+.sim-header {
+	@include fullWidthHeader;
+	background: $primary2 url("img/VR1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+/*********************CONTENT**/
+
+
+.row-1 {
+	@include fullWidthTextBar;
+}
+
+.row-2 {
+	width: 100%;
+	background: $primary2;
+
+	.row-2-wrapper {
+		@include mwidths;
+		display: flex;
+		justify-content: space-between;
+
+		.img-box {
+			width: 30%;
+			border: 1px solid red;
+		}
+
+		.text-box {
+			width: 70%;
+			padding: 40px;
+			color: white;
+		}
+	}
+}
+
+.row-3 {
+	@include fullWidthTextBar;
+}
 
 /********* FOOTER *********/
 
