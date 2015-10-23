@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="353px" height="216px" viewBox="0 0 353 216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 1 + Triangle 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-1-+-Triangle-2" sketch:type="MSLayerGroup" fill="#D8D8D8">
+            <g sketch:type="MSShapeGroup">
+                <path d="M336.848142,215.388661 L10.3720271,215.388661 L10.3720271,215.388661 L145.750851,109.619132 L176.5,133.186573 L211.460823,106.391128 L336.848142,215.388661 Z M350.958966,211.443658 C352.239375,209.763166 353,207.665013 353,205.389301 L353,7.90890785 C353,4.94560661 351.715753,2.28769015 349.674532,0.458326203 L221.371607,98.7950857 L350.958966,211.443658 Z M0.278971443,207.747954 C0.0966172846,206.991908 0,206.202092 0,205.389301 L0,7.90890785 C0,4.94999635 1.28587978,2.29125719 3.32824645,0.460455846 L3.32824645,0.460455846 L135.719198,101.930451 L0.278971443,207.747954 L0.278971443,207.747954 Z" id="Rectangle-1"></path>
+                <path d="M177.002849,117.859296 L19.1082621,0.0904522613 L334.897436,0.0904522613 L177.002849,117.859296 L177.002849,117.859296 Z" id="Triangle-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>
