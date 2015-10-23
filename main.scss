@@ -150,6 +150,7 @@ body {
 		}
 
 		.mob-drop-menu {
+			display: none;
 			clear: both;
 			background: $primary4;
 			padding: 20px;
@@ -166,12 +167,25 @@ body {
 					color: white;
 					padding: 20px;
 					margin: 0 auto;
+
+
 				}
 
 				a:nth-child(n+2) {
 					border-top: 1px solid $primary3;
 				}
 			}
+
+			.portfolio-drop {
+						display: none;
+						background: $primary2;
+						padding-left: 20px;
+
+
+						a:nth-child(n+2) {
+							border-top: 1px solid $primary3;
+						}
+					}
 
 			@media screen and (min-width: $media-mob) {
 				display: none;
@@ -191,7 +205,7 @@ body {
 				justify-content: space-between;
 				flex-wrap: no-wrap;
 					@media screen and (max-width: $media-mob) {
-					display: none; /* JQUERY WILL NEED TO CHANGE DISPLAY ON BOTH FLEXBOX AND ALTERNATIVE*/
+					display: none; 
 					}
 				}
 					
@@ -216,6 +230,21 @@ body {
 			@media screen and (max-width: $media-mob) {
 				display: none;
 			}
+		}
+
+		.desk-portfolio-drop {
+			display: none;
+			background: yellow;
+			position: absolute;
+			top: $header-height;
+			right: 0px;
+			width: 30%;
+			max-width: 225px;
+
+			@media screen and (max-width: $media-mob) {
+				display: none;
+			}
+
 		}
 	}
 }
@@ -506,16 +535,170 @@ body {
 	@include fullWidthTextBar;
 }
 
+
+/********* CONTACT PAGE *********/
+
+
+/*********************CONTENT**/
+
+.contact-wrapper {
+	margin: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 40px;
+	padding-top: 100px;
+	background: $primary3;
+	@media screen and (max-width: $media-mob) {
+		padding: 0px;
+		padding-top: 80px;
+	}
+
+	.contact-box {
+		@include mwidths;
+		padding: 40px;
+		padding-top: 100px;
+
+		.contact-img {
+			float: left;
+			margin: 30px 40px 40px 0px;
+			max-width: 206px;
+			@media screen and (max-width: 660px) {
+				float: none;
+				margin: 0 auto;
+				padding-bottom: 30px;
+			}
+		}
+
+		.contact-email {
+			img {
+				width: 30px;
+				display: inline-block;
+			}
+			p {
+				display: inline-block;
+				padding-left: 15px;
+			}
+		}
+
+		.contact-phone {
+			img {
+				width: 30px;
+				display: inline-block;
+			}
+			p {
+				display: inline-block;
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+/********* PUBLICATIONS PAGE *********/
+
+
+/*********************CONTENT**/
+
+.pub-header {
+	@include fullWidthHeader;
+	background: $primary2 url("img/VR1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.pub-wrapper {
+	margin: 0;
+	width: 100%;
+	padding: 40px;
+	background: $primary3;
+
+	.pub-box {
+		@include mwidths;
+		padding: 40px;
+
+		ul {
+			li {
+				padding: 15px 0px;
+			}
+		}
+	}
+}
+
+/********* CASE STUDIES PAGE *********/
+
+
+/*********************CONTENT**/
+
+.case-wrapper {
+	margin: 0;
+	width: 100%;
+	padding: 40px;
+	background: $primary3;
+
+	.case-box {
+		@include mwidths;
+		padding: 80px;
+		@media screen and (max-width: $media-mob) {
+				padding: 0px;
+				padding-top: 80px;
+			}
+
+		.space {
+			padding-top:40px;
+		}
+
+		.figure {
+			width: 50%;
+			float: left;
+			display: inline-block;
+			text-align: center;
+			@media screen and (max-width: 1132px) {
+				float: none;
+				display: block;
+				margin: 0 auto;
+				width: 70%;
+			}
+			@media screen and (max-width: $media-mob) {
+				width: 100%;
+			}
+
+			img {
+				width: 100%;
+				padding: 10px;
+			}
+		}
+		.fig3 {
+			img {
+				max-width: 350px;
+				
+			}
+		}
+
+		.fig4 {
+			img {
+				width: auto;
+				max-height: 263px;
+			}
+		}
+	}
+}
+
+
+
 /********* FOOTER *********/
 
 footer {
 	clear:both;
-	height: 100px;
 	background: $primary1;
 	color: white;
-	padding: 40px;
+	padding: 20px;
 	display: flex;
 	justify-content: space-between;
+	@media screen and (max-width: $media-mob) {
+		display: block;
+		text-align: center;
+	}
+
+
 
 	.signature  {
 		a {
