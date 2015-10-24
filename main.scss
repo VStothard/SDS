@@ -157,6 +157,10 @@ body {
 			-webkit-box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
 			-moz-box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
 			box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.75);
+			@media screen and (min-width: $media-mob) {
+				display: none;
+			}
+
 
 
 			.mob-nav-links {
@@ -203,14 +207,15 @@ body {
 			.flexbox & {
 				display: flex;
 				justify-content: space-between;
-				flex-wrap: no-wrap;
+				flex-wrap: nowrap;
 					@media screen and (max-width: $media-mob) {
 					display: none; 
 					}
 				}
 					
 
-			a {
+			a,
+			p {
 				margin-left: 10px;
 				padding: 10px 5px;
 				color: $link-color;
@@ -234,16 +239,28 @@ body {
 
 		.desk-portfolio-drop {
 			display: none;
-			background: yellow;
+			background: $primary2;
 			position: absolute;
 			top: $header-height;
 			right: 0px;
 			width: 30%;
 			max-width: 225px;
+			padding: 0px 10px;
 
 			@media screen and (max-width: $media-mob) {
 				display: none;
 			}
+
+			a {
+				display: block;
+				text-decoration: none;
+				color: $link-color;
+				padding: 10px 5px 10px 5px;
+			}
+
+			a:nth-child(n+2) {
+							border-top: 1px solid $primary3;
+						}
 
 		}
 	}
@@ -322,7 +339,7 @@ body {
 				
 				width: 100%;
 				display: block;
-				margin-left: 0 auto;
+				margin: 0 auto;
 
 				.skill-image {
 					margin: 0 auto;
