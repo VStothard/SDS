@@ -82,6 +82,9 @@ body {
       -webkit-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75); }
+      @media screen and (min-width: 840px) {
+        .desk-nav-bar nav .mob-drop-menu {
+          display: none; } }
       .desk-nav-bar nav .mob-drop-menu .mob-nav-links a {
         display: block;
         text-decoration: none;
@@ -108,19 +111,22 @@ body {
       .flexbox .desk-nav-bar nav .nav-links {
         display: flex;
         justify-content: space-between;
-        flex-wrap: no-wrap; }
+        flex-wrap: nowrap; }
         @media screen and (max-width: 840px) {
           .flexbox .desk-nav-bar nav .nav-links {
             display: none; } }
-      .desk-nav-bar nav .nav-links a {
+      .desk-nav-bar nav .nav-links a,
+      .desk-nav-bar nav .nav-links p {
         margin-left: 10px;
         padding: 10px 5px;
         color: white;
         text-decoration: none;
         text-transform: uppercase; }
-        .desk-nav-bar nav .nav-links a:hover {
+        .desk-nav-bar nav .nav-links a:hover,
+        .desk-nav-bar nav .nav-links p:hover {
           color: #087ca7; }
-        .desk-nav-bar nav .nav-links a .selected {
+        .desk-nav-bar nav .nav-links a .selected,
+        .desk-nav-bar nav .nav-links p .selected {
           border: 1px solid yellow;
           color: #087ca7; }
       @media screen and (max-width: 840px) {
@@ -128,15 +134,23 @@ body {
           display: none; } }
     .desk-nav-bar nav .desk-portfolio-drop {
       display: none;
-      background: yellow;
+      background: #087ca7;
       position: absolute;
       top: 90px;
       right: 0px;
       width: 30%;
-      max-width: 225px; }
+      max-width: 225px;
+      padding: 0px 10px; }
       @media screen and (max-width: 840px) {
         .desk-nav-bar nav .desk-portfolio-drop {
           display: none; } }
+      .desk-nav-bar nav .desk-portfolio-drop a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 10px 5px 10px 5px; }
+      .desk-nav-bar nav .desk-portfolio-drop a:nth-child(n+2) {
+        border-top: 1px solid #f4f4f9; }
 
 .header-bar {
   padding-top: 90px;
@@ -203,7 +217,7 @@ body {
         .skills-box .skills-wrapper .skill {
           width: 100%;
           display: block;
-          margin-left: 0 auto; }
+          margin: 0 auto; }
           .skills-box .skills-wrapper .skill .skill-image {
             margin: 0 auto; }
           .skills-box .skills-wrapper .skill h2,
