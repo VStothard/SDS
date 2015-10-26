@@ -293,6 +293,22 @@ body {
 /*********HOME PAGE************/
 /**************SKILLS BOX*/
 
+.headline {
+	width: 100%;
+	background: yellow;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	background: $primary2;
+	
+
+	h1 {
+	color: $paragraph-color;
+	text-align:  center;
+	margin: 0;
+
+	}
+}
+
 .skills-box {
 	background: $primary2;
 	width: 100%;

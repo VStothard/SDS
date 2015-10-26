@@ -180,6 +180,17 @@ body {
 
 /*********HOME PAGE************/
 /**************SKILLS BOX*/
+.headline {
+  width: 100%;
+  background: yellow;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background: #087ca7; }
+  .headline h1 {
+    color: white;
+    text-align: center;
+    margin: 0; }
+
 .skills-box {
   background: #087ca7;
   width: 100%; }
