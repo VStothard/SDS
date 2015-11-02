@@ -21,7 +21,7 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   background-position: center;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
 /********* HEADER *********/
 .desk-nav-bar {
@@ -32,10 +32,7 @@ body {
   height: 90px;
   clear: both;
   position: fixed;
-  /*ADD THIS WHEN YOU DO THE MIXIN*/
-  -webkit-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75); }
+  /*ADD THIS WHEN YOU DO THE MIXIN*/ }
   .desk-nav-bar nav {
     padding: 0; }
     .desk-nav-bar nav .logo {
@@ -78,10 +75,7 @@ body {
       display: none;
       clear: both;
       background: #586f7c;
-      padding: 20px;
-      -webkit-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75); }
+      padding: 20px; }
       @media screen and (min-width: 840px) {
         .desk-nav-bar nav .mob-drop-menu {
           display: none; } }
@@ -158,14 +152,18 @@ body {
   /*stops elements from stretching too wide on large screens*/
   max-width: 1024px;
   margin: 0 auto;
-  min-height: 800px; }
+  min-height: 600px; }
   .header-bar .header-box {
     color: white;
     background-color: rgba(0, 0, 0, 0.4);
-    width: 60%;
-    min-height: 800px;
-    padding: 80px 50px 80px 50px;
+    width: 100%;
+    min-height: 600px;
+    padding: 100px 50px 80px 50px;
+    text-align: center;
+    margin: 0 auto;
     /*standard contact button*/ }
+    .header-bar .header-box h1 {
+      text-transform: uppercase; }
     .header-bar .header-box img {
       width: 150px;
       padding: 30px 0px; }
@@ -183,17 +181,19 @@ body {
 .headline {
   width: 100%;
   background: yellow;
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 20px;
   background: #087ca7; }
   .headline h1 {
     color: white;
     text-align: center;
+    text-transform: uppercase;
     margin: 0; }
 
 .skills-box {
   background: #087ca7;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 80px; }
   .skills-box .skills-wrapper {
     width: 90%;
     /*stops elements from stretching too wide on large screens*/
@@ -259,31 +259,37 @@ body {
       display: inline-block;
       background: #f4f4f9;
       /*standard contact button*/ }
+      @media screen and (max-width: 840px) {
+        .info-bar .info-wrap .info-box {
+          display: block;
+          padding: 80px 10px 40px 10px; } }
       .info-bar .info-wrap .info-box img {
         width: 150px;
         padding: 30px 0px; }
       .info-bar .info-wrap .info-box .demo-img {
         width: 100%;
         height: 350px;
-        background: url("img/VR1.jpg");
+        background: url("img/truck.jpg");
         background-size: cover;
         background-position: bottom center; }
       .info-bar .info-wrap .info-box h1 {
         padding: 30px 30px 10px 30px; }
+        @media screen and (max-width: 840px) {
+          .info-bar .info-wrap .info-box h1 {
+            padding: 30px 10px 10px 10px; } }
       .info-bar .info-wrap .info-box p {
         padding: 10px 30px 5px 30px; }
+        @media screen and (max-width: 840px) {
+          .info-bar .info-wrap .info-box p {
+            padding: 10px 10px 10px 10px; } }
+      .info-bar .info-wrap .info-box .demo-img2 {
+        width: 100%;
+        height: 350px;
+        background: url("img/ContinuousMiner.jpg");
+        background-size: cover;
+        background-position: bottom center; }
       .info-bar .info-wrap .info-box .button {
         margin: 0px 30px; }
-    .info-bar .info-wrap .img-bar .img-wrapper {
-      /*stops elements from stretching too wide on large screens*/
-      max-width: 1024px;
-      margin: 0 auto; }
-      .info-bar .info-wrap .img-bar .img-wrapper .img-bar-box {
-        width: 33.333%;
-        display: inline-block;
-        float: left; }
-        .info-bar .info-wrap .img-bar .img-wrapper .img-bar-box img {
-          width: 100%; }
 
 /**************IMG BAR*/
 /*
@@ -365,7 +371,7 @@ body {
   height: 400px;
   margin: 0;
   width: 100%;
-  background: #087ca7 url("img/VR1.jpg");
+  background: #087ca7 url("img/truck.jpg");
   background-size: cover;
   background-position: center; }
 
@@ -382,36 +388,12 @@ body {
       max-width: 1024px;
       margin: 0 auto;
       padding: 40px; }
-
-.row-2 {
-  width: 100%;
-  background: #087ca7; }
-  .row-2 .row-2-wrapper {
-    /*stops elements from stretching too wide on large screens*/
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; }
-    .row-2 .row-2-wrapper .img-box {
-      width: 30%;
-      border: 1px solid red; }
-    .row-2 .row-2-wrapper .text-box {
-      width: 70%;
-      padding: 40px;
-      color: white; }
-
-.row-3 {
-  /*creates a full width text row*/ }
-  .row-3 .text-wrapper {
-    margin: 0;
+  .row-1 .simcon {
     width: 100%;
-    padding: 40px;
-    background: #f4f4f9; }
-    .row-3 .text-wrapper .text-box {
-      /*stops elements from stretching too wide on large screens*/
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 40px; }
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px; }
 
 /********* CONTACT PAGE *********/
 /*********************CONTENT**/
